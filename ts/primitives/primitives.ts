@@ -38,6 +38,8 @@ export class TInt extends Typesafe<number> {
 
 /**
  * Specific instance of Typesafe<T> for string values.
+ * see commit cbc6b700ace6f42f3a31a889a7cca5c8d1723011 for information
+ * about why the constructor is not in the generic class
  */
 export class TString extends Typesafe<string> {
     constructor(start: string) {
@@ -49,6 +51,8 @@ export class TString extends Typesafe<string> {
 
 /**
  * Specific instance of Typesafe<T> for boolean values.
+ * see commit cbc6b700ace6f42f3a31a889a7cca5c8d1723011 for information
+ * about why the constructor is not in the generic class
  */
 export class TBool extends Typesafe<boolean> {
     constructor(start: boolean) {

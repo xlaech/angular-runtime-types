@@ -39,7 +39,7 @@ describe('Primitives:', () => {
             expect(() => new TBool(null)).throws();
         });
 
-        it('will accept and save a new integer value', () => {
+        it('will accept and save a new boolean value', () => {
             let val: TBool = new TBool(true);
             val.value = false;
             expect(val.value).to.equal(false);
@@ -50,9 +50,35 @@ describe('Primitives:', () => {
             expect(() => val.value = null).throws();
         });
 
-        it('throws for a new non number value', () => {
+        it('throws for a new non boolean value', () => {
             let val: any = new TBool(true);
             expect(() => val.value = "test").throws();
         })
-    })
+    });
+    describe("TString:", () => {
+        it('can be created and its value can be set and is saved', () => {
+            let val: TString = new TString("I like trains");
+            expect(val.value).to.equal("I like trains");
+        });
+
+        it('throws for a null value at initialization', () => {
+            expect(() => new TString(null)).throws();
+        });
+
+        it('will accept and save a new string value', () => {
+            let val: TString = new TString("mmh... those cookies :)");
+            val.value = "over 9000";
+            expect(val.value).to.equal("over 9000");
+        });
+
+        it('throws for a new null value', () => {
+            let val: TString = new TString("null :)");
+            expect(() => val.value = null).throws();
+        });
+
+        it('throws for a new non number value', () => {
+            let val: any = new TString("hohoho");
+            expect(() => val.value = 9001).throws();
+        })
+    });
 });
