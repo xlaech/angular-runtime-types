@@ -12,13 +12,14 @@
         "outDir": "../js"
     },
     "filesGlob": [
-        "./**/*.ts",
-        "!./node_modules/**/*.ts"
+        "./ts/**/*.ts",
+        "./ts/*.ts",
+        "!./node_modules/**/*.*"
     ],
     "files": [
         "./index.ts",
         "./primitives/primitives.ts",
-        "./typings/node/node.d.ts",
-        "./typings/tsd.d.ts"
+        "./list/array.ts",
+        "./list/list.ts"
     ]
 }
