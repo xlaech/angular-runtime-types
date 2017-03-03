@@ -1,11 +1,7 @@
 import {checkPrimitiveTypes} from "../typecheckers/primitives"
 
 export abstract class Typesafe<T> {
-    private _value: T;
-
-    constructor(start: T) {
-        this._value = start;
-    }
+    protected _value: T;
 
     get value(): T {
         return this._value;
@@ -17,6 +13,14 @@ export abstract class Typesafe<T> {
     }
 }
 
-export class TInt extends Typesafe<number> {};
+export class TInt extends Typesafe<number> {
+    constructor(start: number) {
+        super();
+        checkPrimitiveTypes(0, start)
+        this._value = start;
+    }
+};
+
+
 export class TString extends Typesafe<string> {};
 export class TBool extends Typesafe<boolean> {};
