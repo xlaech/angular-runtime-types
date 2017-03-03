@@ -1,11 +1,11 @@
 {
   "name": "angular-runtime-types",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Provides Wrappers for Typescript Primitives, Lists and Maps, to ensure typechecking in angular2 templates.",
   "main": "js/index.js",
   "typings": "js/index",
   "scripts": {
-    "test": "mocha -r ts-node/register tests/**/*.test.ts"
+    "test": "mocha -r ts-node/register -c tests/**/*.test.ts"
   },
   "repository": {
     "type": "git",

@@ -22,4 +22,13 @@ export class TList<T> extends TArray<T> {
 
         return true;  
     }
+
+    fromTList(list: TList<T>) {
+        // clear list
+        while(this.length != 0)
+            this.pop();
+
+        // add new values
+        list.forEach(x => this.push(x));
+    }
 }

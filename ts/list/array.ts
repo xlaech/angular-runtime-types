@@ -1,4 +1,5 @@
 import { checkPrimitiveTypes } from '../typecheckers/primitives'
+import { checkListTypes } from '../typecheckers/lists'
 
 /**
  * Extends the JavaScript Array to ensure runtime typechecking for all array function mutating state.
@@ -11,7 +12,7 @@ export class TArray<T> extends Array<T> {
     }
 
     push(...values: T[]): number {
-        checkPrimitiveTypes(this, typeof values);
+        checkListTypes(this, values);
         return this.push(...values);
     } 
 

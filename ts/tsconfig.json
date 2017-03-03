@@ -14,12 +14,11 @@
     "filesGlob": [
         "./ts/**/*.ts",
         "./ts/*.ts",
-        "!./node_modules/**/*.*"
+        "!./node_modules/**/*.*",
+        "!./test/**/*.ts"
     ],
     "files": [
         "./index.ts",
-        "./primitives/primitives.ts",
-        "./list/array.ts",
-        "./list/list.ts"
+        "./**/*.ts"
     ]
 }

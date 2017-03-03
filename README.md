@@ -52,7 +52,10 @@ If not you can run
 in the project directory.
 
 ### Running Tests
-The test are written in mocha. You can run them with
+The test are written in mocha. 
+In VSCode you can just run the "Run Mocha" Configuration.
+
+You can also run them in the terminal of your choice with
 
 `npm tests`
 
