@@ -14,16 +14,16 @@ export class HomePage {
 }
 ```
 
-The biggest benefit of using Typescript in a JavaScript is the Typesafety it provides. 
-However, code inside of Angular templates wil not be check during compiletime. Since it is
-allready JavaScript at runtime, the code above will set the number above to a string value
+The biggest benefit of using Typescript in a JavaScript project is the Typesafety it provides. 
+However, code inside of Angular templates will not be check during compiletime. Since it is
+allready JavaScript at runtime, the code above will set the numeric value `foo` above to a string value
 and change it's "type" to string.
 
 Many errors one can make in template files are often difficult to spot or understand because of this.
 
 ### Usage/Solution
 This package provides new Types for all primitives which will check all assignments at runtime, so that
-you acctually get feedback if you make an error at runtime in your template files.
+you actually get feedback if you make an error at runtime in your template files.
 
 #### Primitives
 todo
