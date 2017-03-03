@@ -1,7 +1,7 @@
 {
   "name": "angular-runtime-types",
-  "version": "1.0.5",
-  "description": "A sample TypeScript npm module",
+  "version": "0.0.1",
+  "description": "Provides Wrappers for Typescript Primitives, Lists and Maps, to ensure typechecking in angular2 templates.",
   "main": "js/index.js",
   "typings": "js/index",
   "scripts": {
@@ -9,16 +9,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/"
+    "url": "git+https://github.com/xlaech/angular-runtime-types/"
   },
   "keywords": [
     "typescript",
-    "atom"
+    "angular",
+    "typesafety",
+    "template",
+    "wrapper",
+    "primitive",
+    "list",
+    "map"
   ],
   "author": "n.antor@outlook.com",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/"
+    "url": "https://github.com/xlaech/angular-runtime-types/issues"
   },
-  "homepage": "https://github.com/"
+  "homepage": "https://github.com/xlaech/angular-runtime-types/"
 }
