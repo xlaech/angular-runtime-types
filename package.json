@@ -5,7 +5,7 @@
   "main": "js/index.js",
   "typings": "js/index",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha -r ts-node/register tests/**/*.test.ts"
   },
   "repository": {
     "type": "git",
@@ -28,7 +28,16 @@
   },
   "homepage": "https://github.com/xlaech/angular-runtime-types/",
   "dependencies": {
-    "@types/lodash": "^4.14.54",
     "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "@types/chai": "^3.4.35",
+    "@types/lodash": "^4.14.54",
+    "@types/mocha": "^2.2.39",
+    "@types/node": "^7.0.5",
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0",
+    "ts-node": "^2.1.0",
+    "typescript": "^2.2.1"
   }
 }
