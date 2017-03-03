@@ -26,5 +26,9 @@
   "bugs": {
     "url": "https://github.com/xlaech/angular-runtime-types/issues"
   },
-  "homepage": "https://github.com/xlaech/angular-runtime-types/"
+  "homepage": "https://github.com/xlaech/angular-runtime-types/",
+  "dependencies": {
+    "@types/lodash": "^4.14.54",
+    "lodash": "^4.17.4"
+  }
 }
