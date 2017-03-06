@@ -15,14 +15,19 @@
 			// Automatically stop program after launch.
 			"stopOnEntry": false,
 			// Command line arguments passed to the program.
-			"args": ["-r", "ts-node/register", "--color", "--debug-brk", "tests/**/*.test.ts"],
+			"args": ["testjs/tests/**/*.js", "--color"],
 			// Workspace relative or absolute path to the working directory of the program being debugged. Default is the current workspace.
 			"cwd": "${workspaceRoot}",
 			// Workspace relative or absolute path to the runtime executable to be used. Default is the runtime executable on the PATH.
 			"runtimeExecutable": null,
 			// Environment variables passed to the program.
 			"env": { "NODE_ENV": "testing"},
-			"sourceMaps": true
+			"sourceMaps": true,
+			"outFiles": [
+				"${workspaceRoot}/testjs/**/*.js",
+				"${workspaceRoot}/testjs/*.js"
+			],
+			"preLaunchTask": "Compile Tests"
 		}
     ]
 }
