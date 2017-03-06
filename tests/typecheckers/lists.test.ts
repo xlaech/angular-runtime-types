@@ -3,7 +3,7 @@ import { expect } from 'chai';
 import 'mocha';
 
 describe('TypeCheckers:', () => {
-    describe("Primitives:", () => {
+    describe("Lists:", () => {
         it('will not throw if the values types match', () => {
             let val1: number[] = [3,3];
             let val2: number[] = [42,3];
