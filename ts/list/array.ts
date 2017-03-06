@@ -6,6 +6,13 @@ import { checkListTypes } from '../typecheckers/lists'
  * Other functions will still be handled by the Array<T> implementation
  */
 export class TArray<T> extends Array<T> {
+
+    /**
+     * Adds new values to the array
+     * 
+     * Note: empty arrays can not be typechecked due to lost typeinformation during compilation.
+     * To avoid this, make sure your array gets initialized with some values
+     */
     push(...values: T[]): number {
         checkListTypes(this, values);
         return super.push(...values);

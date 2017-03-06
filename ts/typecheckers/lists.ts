@@ -5,20 +5,22 @@ export function checkListTypes(shouldBe: any, value: any) {
         ]
 
         if (!checks.reduce((x,y) => x && y))
-            throw "Typemissmatch. Expected a " + typeof shouldBe + ", but the provided variable '" + value + "' is of type " + typeof value + ".";
-
-        var concatList = (shouldBe as Array<any>).concat(value);
+            throw "Typemissmatch. Expected an array was expected but '" + value + "' has type '" + typeof value  + ".";
 
         // cannot check the type :(
-        if(concatList.length === 0)
+        if(shouldBe.length === 0 || value.length === 0)
             return;
 
         // Do all the values have the same type?
-        var type = concatList[1];
-        var matched = concatList
+        var type = shouldBe[1];
+        var matched = value
                         .map(x => typeof x === typeof type)
                         .reduce((x,y) => x && y);
 
         if(!matched)
-            throw "Typemissmatch. Expected a " + typeof shouldBe + ", but the provided variable '" + value + "' is of type " + typeof value + ".";
+            throw "Typemissmatch. This lists expects values of type " + 
+                    typeof shouldBe[0] + 
+                    ", but the provided list '" + 
+                    value + "' is of type " + 
+                    typeof value[0] + "[].";
 }
