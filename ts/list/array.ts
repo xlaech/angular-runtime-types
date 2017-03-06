@@ -6,14 +6,14 @@ import { checkListTypes } from '../typecheckers/lists'
  * Other functions will still be handled by the Array<T> implementation
  */
 export class TArray<T> extends Array<T> {
-    constructor(start: Array<T> = []) {
+    /**constructor(start: Array<T> = []) {
         super();
         this.push(...start);
-    }
+    }**/
 
     push(...values: T[]): number {
         checkListTypes(this, values);
-        return this.push(...values);
+        return super.push(...values);
     } 
 
     /**

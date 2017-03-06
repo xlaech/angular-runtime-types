@@ -16,7 +16,7 @@ export function checkListTypes(shouldBe: any, value: any) {
         // Do all the values have the same type?
         var type = concatList[1];
         var matched = concatList
-                        .map(x => typeof x === type)
+                        .map(x => typeof x === typeof type)
                         .reduce((x,y) => x && y);
 
         if(!matched)

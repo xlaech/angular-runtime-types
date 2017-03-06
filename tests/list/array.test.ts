@@ -6,7 +6,8 @@ describe('Lists:', () => {
     describe("Array:", () => {
         describe("push():", () => {
             it('will insert values provided in the beginning', () => {
-                var array: TArray<number> = new TArray<number>([1,2,3]);
+                var array: TArray<number> = new TArray<number>();//[1,2,3]);
+                array.push(1,2,3);
                 expect(array.length).to.equal(3); 
                 expect(array[0]).to.equal(1); 
                 expect(array[1]).to.equal(2); 
@@ -19,7 +20,8 @@ describe('Lists:', () => {
             });
 
             it('will throw when all values are of another type', () => {
-                var array: TArray<number> = new TArray<number>([2,3,4]);
+                var array: TArray<number> = new TArray<number>();//[2,3,4]);
+                array.push(2,3,4)
                 expect(() => array.push(
                     fakeNumber("haja"), 
                     fakeNumber("nonono"), 
